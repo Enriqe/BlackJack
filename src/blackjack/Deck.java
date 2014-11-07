@@ -4,6 +4,18 @@ import java.util.*;
 public class Deck extends Card{
 	
 	Card[] deckCards = new Card[52];
+	
+	public void Deck(){
+		Card[] deckCards = new Card[52];
+	}
+
+	public Card[] getDeckCards() {
+		return deckCards;
+	}
+
+	public void setDeckCards(Card[] deckCards) {
+		this.deckCards = deckCards;
+	}
 
 	public void createDeck() {
 		int count = 0;
@@ -43,5 +55,7 @@ public class Deck extends Card{
 			deckCards[i] = temp;
 		}
 	}
+	
+	
 
 }

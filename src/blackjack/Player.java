@@ -8,16 +8,19 @@ public class Player {
 	public Hand hand;
 	public int score;
 	
+	public Player(){
+		turn = false;
+		name = "";
+		hand = makeHand();
+		score = 0;
+	}
+	
 	public Player(String name){
 		this.name = name;
 		this.hand = makeHand();
 		score = 0;
 	}
-	
-	public void hit(){
-		hand.addCard();
-	}
-	
+
 	public Hand makeHand(){
 		return new Hand();
 	}

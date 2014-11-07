@@ -3,15 +3,17 @@ package blackjack;
 import java.util.Random;
 
 public class Hand extends Card{
-    Card cards[]; //arreglo dinamico para agregar cartas con cada "hit"
-    int cartas=0;
-    Random rand	= new Random();
     
-	public void addCard() {
+	
+	Card[] cards = new Card [10]; //arreglo dinamico para agregar cartas con cada "hit"
+    int cartas=0;
+    
+    
+	public void addCard(Card cardDrawn) {
 		// TODO Auto-generated method stub
-		int n= rand.nextInt(52)+1;
-		cards[cartas] = 
-		cartas +=1;
+		cards[cartas] = cardDrawn;
+		cartas++;
+		//cards[cartas] = cartas +=1;
 	}
 	
 	
