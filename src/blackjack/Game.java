@@ -26,6 +26,7 @@ public class Game {
         player.name = "";
         dealer.name = "Dealer";
         dealer.turn = false;
+        
         player.addCard();
         player.addCard();
         dealer.addCard();
