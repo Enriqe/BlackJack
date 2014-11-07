@@ -3,13 +3,11 @@ package blackjack;
 public class Game {
     Deck deck;
     Player player, dealer;
-    public int score = 0;
     
-    public Game(Deck d, Player p, Player deal, int s){
+    public Game(Deck d, Player p, Player deal){
     	deck = d;
     	player = p;
     	dealer = deal;
-    	score = s;
     }
     
     Deck deck(){
@@ -19,14 +17,9 @@ public class Game {
     Player player(String nombre) {
 		return null;
 	}
-    
-    void incrementScore() {
-    	
-	}
 
 
     void deal() {
-        score = 0;
         deck.createDeck();
         deck.shuffleDeck();
         player.turn = true;
