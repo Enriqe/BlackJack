@@ -33,16 +33,14 @@ public class Deck extends Card{
 			count++;
 			deckCards[i].setRank(count);
 		}
-		int index, temp;
-		String sTemp;
+		int index;
+		Card temp;
 		Random random = new Random();
 		for(int i = deckCards.length - 1; i > 0; i--) {
 			index = random.nextInt(i + 1);
-			temp = deckCards[index].rank;
-			sTemp = deckCards[index].suit;
+			temp = deckCards[index];
 			deckCards[index] = deckCards[i];
-			deckCards[i].rank = temp;
-			deckCards[i].suit = sTemp;
+			deckCards[i] = temp;
 		}
 	}
 
