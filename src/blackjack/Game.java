@@ -1,8 +1,10 @@
 package blackjack;
 
+import java.util.Scanner;
+
 public class Game {
     public Deck deck;
-    public static Player player, dealer;
+    public static Player player = new Player(), dealer;
     public int recorrido = 0;
     public Card cartaActual;
     
@@ -46,8 +48,14 @@ public class Game {
     };
     
     public static void main(String [] args){
-    	System.out.print(player.getScore());
-    	System.out.print("Hit?");
+    	Scanner in = new Scanner(System.in);
+    	System.out.println("BlackJack!");
+    	System.out.println("Score: " + player.getScore());
+    	System.out.println("Hit?");
+    	int i = in.nextInt();
+    	String s = in.next();
+    	System.out.println(i);
+    	System.out.println(s);
     }
 
     

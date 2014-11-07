@@ -6,7 +6,7 @@ public class Player {
 	public boolean turn;
 	public String name;
 	public Hand hand;
-	public int score;
+	public int score=0;
 	
 	public Player(){
 		turn = false;
