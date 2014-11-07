@@ -3,16 +3,25 @@ package blackjack;
 public class Game {
     Deck deck;
     Player player, dealer;
-    int score = 0;
+    public int score = 0;
+    
+    public Game(Deck d, Player p, Player deal, int s){
+    	deck = d;
+    	player = p;
+    	dealer = deal;
+    	score = s;
+    }
     
     Deck deck(){
     	return null;
     }
+    
     Player player(String nombre) {
 		return null;
 	}
     
     void incrementScore() {
+    	
 	}
 
 
@@ -30,5 +39,3 @@ public class Game {
         dealer.addCard();
     };
 }
-
-
