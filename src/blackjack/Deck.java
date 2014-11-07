@@ -1,4 +1,5 @@
 package blackjack;
+import java.util.*;
 
 public class Deck extends Card{
 	
@@ -32,11 +33,17 @@ public class Deck extends Card{
 			count++;
 			deckCards[i].setRank(count);
 		}
-	}
-
-	public void shuffleDeck() {
-		// TODO Auto-generated method stub
-		
+		int index, temp;
+		String sTemp;
+		Random random = new Random();
+		for(int i = deckCards.length - 1; i > 0; i--) {
+			index = random.nextInt(i + 1);
+			temp = deckCards[index].rank;
+			sTemp = deckCards[index].suit;
+			deckCards[index] = deckCards[i];
+			deckCards[i].rank = temp;
+			deckCards[i].suit = sTemp;
+		}
 	}
 
 }
