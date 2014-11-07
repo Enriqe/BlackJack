@@ -1,13 +1,13 @@
 package blackjack;
 
 public class Card {
-    char suit;
+    String suit;
     int rank;
     
-	public char getSuit() {
+	public String getSuit() {
 		return suit;
 	}
-	public void setSuit(char suit) {
+	public void setSuit(String suit) {
 		this.suit = suit;
 	}
 	public int getRank() {
