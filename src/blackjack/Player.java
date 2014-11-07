@@ -14,7 +14,7 @@ public class Player {
 		score = 0;
 	}
 	
-	public Hand hit(){
+	public void hit(){
 		hand.addCard();
 	}
 	
