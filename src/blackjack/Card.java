@@ -3,6 +3,13 @@ package blackjack;
 public class Card {
     String suit;
     int rank;
+    boolean isUsed;
+    
+    public Card(){
+    	suit = "";
+    	rank = 0;
+    	isUsed = false;
+    }
     
 	public String getSuit() {
 		return suit;

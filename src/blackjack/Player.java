@@ -14,6 +14,10 @@ public class Player {
 		score = 0;
 	}
 	
+	public void hit(){
+		hand.addCard();
+	}
+	
 	public Hand makeHand(){
 		return new Hand();
 	}
@@ -41,4 +45,5 @@ public class Player {
 	public void setScore(int score) {
 		this.score = score;
 	}
+
 }

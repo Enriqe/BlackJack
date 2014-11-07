@@ -1,43 +1,47 @@
 package blackjack;
+import java.util.*;
 
 public class Deck extends Card{
 	
-	Card deckCards[52];
+	Card[] deckCards = new Card[52];
 
 	public void createDeck() {
 		int count = 0;
 		for(int i = 0; i < 13; i++){
-			deckCards[i].setSuit('');
+			deckCards[i].setSuit("Heart");
 			count++;
 			deckCards[i].setRank(count);
-			else if(i > 12 && i < 26){
-				
-			}
-			
 		}
+		
 		count = 0;
 		for(int i = 13; i < 26; i++){
-			deckCards[i].setSuit('');
+			deckCards[i].setSuit("Diamond");
 			count++;
 			deckCards[i].setRank(count);
 		}
+		
 		count = 0;
 		for(int i = 26; i < 39; i++){
-			deckCards[i].setSuit('︎');
+			deckCards[i].setSuit("Spade");
 			count++;
 			deckCards[i].setRank(count);
 		}
+		
 		count = 0;
 		for(int i = 39; i < 52; i++){
-			deckCards[i].setSuit('');
+			deckCards[i].setSuit("Club");
 			count++;
 			deckCards[i].setRank(count);
 		}
-	}
-
-	public void shuffleDeck() {
-		// TODO Auto-generated method stub
-		
+		int index;
+		Card temp;
+		Random random = new Random();
+		for(int i = deckCards.length - 1; i > 0; i--) {
+			index = random.nextInt(i + 1);
+			temp = deckCards[index];
+			deckCards[index] = deckCards[i];
+			deckCards[i] = temp;
+		}
 	}
 
 }
