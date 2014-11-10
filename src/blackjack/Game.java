@@ -83,6 +83,7 @@ public class Game {
     		//stay
     	}
     	else if(i == 3){
+    		System.out.println("Ended Game");
     		System.exit(0);
     	}
     	
