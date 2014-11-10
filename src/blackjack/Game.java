@@ -32,7 +32,7 @@ public class Game {
 
 
     void deal() {
-        deck.createDeck();
+        Deck deck = new Deck();
         recorrido = 0;
         
         player.turn = true;
@@ -58,7 +58,7 @@ public class Game {
     	Scanner in = new Scanner(System.in);
     	Game Juego = new Game();
     	System.out.println("BlackJack!");
-    	//Juego.deal();
+    	Juego.deal();
     	System.out.println("Score: " + player.getScore());
     	System.out.println("Hit? (1)");
     	System.out.println("Stay? (2)");
