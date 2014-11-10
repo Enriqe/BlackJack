@@ -7,6 +7,7 @@ public class Deck extends Card{
 	
 	public void Deck(){
 		Card[] deckCards = new Card[52];
+		this.createDeck();
 	}
 
 	public Card[] getDeckCards() {

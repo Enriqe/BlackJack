@@ -56,13 +56,22 @@ public class Game {
     
     public static void main(String [] args){
     	Scanner in = new Scanner(System.in);
+    	
     	Game Juego = new Game();
     	System.out.println("BlackJack!");
     	Juego.deal();
-    	System.out.println("Score: " + player.getScore());
+    	
+    	System.out.println("What is your name?");
+    	//String s = System.console().readLine();
+    	String s = in.next();
+    	player.setName(s);
+    	
+    	System.out.println(player.getName() + " your Score is: " + player.getScore());
+    	
     	System.out.println("Hit? (1)");
     	System.out.println("Stay? (2)");
     	System.out.println("Quit? (3)");
+    	
     	int i = in.nextInt();
     	
     	if(i == 1){
@@ -76,7 +85,7 @@ public class Game {
     	else if(i == 3){
     		System.exit(0);
     	}
-    	String s = in.next();
+    	
     	System.out.println(i);
     	System.out.println(s);
     }
