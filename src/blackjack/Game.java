@@ -22,14 +22,18 @@ public class Game {
 		return null;
 	}
 
-    void hit(boolean p){
-    	if(p){
+    void hit(){
+    	if(player.turn){
             player.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
+            player.turn = !player.turn;
+            dealer.turn = !dealer.turn;
     	}
     	else{
             dealer.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
+            player.turn = !player.turn;
+            dealer.turn = !dealer.turn;
     	}
     }
     
