@@ -15,13 +15,8 @@ public class Game {
     	dealer = deal;
     	recorrido = r;
     }
-   
-    
-    Player player(String nombre) {
-		return null;
-	}
 
-    void hit(){
+    public void hit(){
     	if(player.turn){
             player.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
@@ -36,7 +31,7 @@ public class Game {
     	}
     }
     
-    void deal() {
+    public void deal() {
         recorrido = 0;
         
         player.turn = true;
@@ -61,5 +56,4 @@ public class Game {
         recorrido++;
     };
  
-   
 }
