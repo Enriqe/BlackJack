@@ -28,24 +28,26 @@ public class Main {
         
         int i = in.nextInt();
         
-        if(i == 1){
-			if(player.turn){
-				Juego.hit();
-				player.turn = !player.turn;
-				dealer.turn = !dealer.turn;
-			}else{
-				Juego.hit();
-				player.turn = !player.turn;
-				dealer.turn = !dealer.turn;
-			}
-		}
-        else if(i == 2){
-            Juego.stay();
-        }
-        else if(i == 3){
-            System.out.println("Ended Game");
-            System.exit(0);
-        }
+        do {
+            if(i == 1){
+    			if(player.turn){
+    				Juego.hit();
+    				player.turn = !player.turn;
+    				dealer.turn = !dealer.turn;
+    			}else{
+    				Juego.hit();
+    				player.turn = !player.turn;
+    				dealer.turn = !dealer.turn;
+    			}
+    		}
+            else if(i == 2){
+                Juego.stay();
+            }
+            else if(i == 3){
+                System.out.println("Ended Game");
+                System.exit(0);
+            }
+        } while(player.turn);
         
          in.close();
     }
