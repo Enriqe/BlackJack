@@ -1,7 +1,5 @@
 package blackjack;
 
-import java.util.Random;
-
 public class Hand {
     
 	Card[] cards = new Card [10]; //arreglo dinamico para agregar cartas con cada "hit"

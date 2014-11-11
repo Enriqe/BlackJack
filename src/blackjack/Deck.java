@@ -5,42 +5,52 @@ public class Deck {
 	
 	public Card[] deckCards = new Card[52];
 	
-	public void Deck(){
+	public Deck(){
 		int count = 0;
+		
 		for(int i = 0; i < 13; i++){
-			deckCards[i].setSuit("Heart");
+			Card testcard = new Card();
+			testcard.setSuit("Heart");
+			testcard.setRank(count);
+			deckCards[i] = testcard;
 			count++;
-			deckCards[i].setRank(count);
 		}
 		
 		count = 0;
 		for(int i = 13; i < 26; i++){
-			deckCards[i].setSuit("Diamond");
+			Card testcard = new Card();
+			testcard.setSuit("Diamond");
+			testcard.setRank(count);
+			deckCards[i] = testcard;
 			count++;
-			deckCards[i].setRank(count);
 		}
 		
 		count = 0;
 		for(int i = 26; i < 39; i++){
-			deckCards[i].setSuit("Spade");
+			Card testcard = new Card();
+			testcard.setSuit("Spade");
+			testcard.setRank(count);
+			deckCards[i] = testcard;
 			count++;
-			deckCards[i].setRank(count);
 		}
 		
 		count = 0;
 		for(int i = 39; i < 52; i++){
-			deckCards[i].setSuit("Club");
+			Card testcard = new Card();
+			testcard.setSuit("Club");
+			testcard.setRank(count);
+			deckCards[i] = testcard;
 			count++;
-			deckCards[i].setRank(count);
 		}
+		
 		int index;
 		Card temp;
 		Random random = new Random();
-		for(int i = deckCards.length - 1; i > 0; i--) {
+		for(int i = this.deckCards.length - 1; i > 0; i--) {
 			index = random.nextInt(i + 1);
-			temp = deckCards[index];
-			deckCards[index] = deckCards[i];
-			deckCards[i] = temp;
+			temp = this.deckCards[index];
+			this.deckCards[index] = this.deckCards[i];
+			this.deckCards[i] = temp;
 		}
 	}
 	
