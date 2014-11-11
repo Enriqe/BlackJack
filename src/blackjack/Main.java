@@ -5,12 +5,13 @@ import java.util.*;
 public class Main {
 	public Deck deck;
     public static Player player = new Player(), dealer = new Player();
+    public static int recorrido = 0;
 	
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         
-        Game Juego = new Game();
+        Game Juego = new Game(player, dealer, recorrido);
         System.out.println("BlackJack!");
         Juego.deal();
         
