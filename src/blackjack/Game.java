@@ -114,7 +114,7 @@ public class Game {
     	
     	System.out.println(i);
     	System.out.println(s);
+    	
+    	 in.close();
     }
-
-
 }
