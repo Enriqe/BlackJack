@@ -9,8 +9,6 @@ public class Game {
     
     public Game(){
     	deck = new Deck();
-    	player = new Player();
-    	dealer = new Player();
     	recorrido = 0;
     }
     
