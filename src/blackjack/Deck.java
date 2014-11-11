@@ -7,10 +7,14 @@ public class Deck {
 	
 	public Deck(){
 		int count = 0;
+		
 		for(int i = 0; i < 13; i++){
-			this.deckCards[i].setSuit("Heart");
+			
+			Card testcard = new Card();
+			testcard.setSuit("Heart");
 			count++;
-			this.deckCards[i].setRank(count);
+			testcard.setRank(count);
+			deckCards[i] = testcard;
 		}
 		
 		count = 0;
