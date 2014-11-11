@@ -39,20 +39,20 @@ public class Game {
         dealer.name = "Dealer";
         dealer.turn = false;
         
-        player.hand.addCard(deck.getCard[recorrido]);
-        System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        player.hand.addCard(deck.deckCards[recorrido]);
+        //System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
         
         player.hand.addCard(deck.deckCards[recorrido]);
-        System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        //System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
         
         dealer.hand.addCard(deck.deckCards[recorrido]);
-        System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        //System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;     
         
         dealer.hand.addCard(deck.deckCards[recorrido]);
-        System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        //System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
     };
     
