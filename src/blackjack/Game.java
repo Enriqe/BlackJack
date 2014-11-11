@@ -35,9 +35,18 @@ public class Game {
     	if(player.turn){
             player.turn = !player.turn;
             dealer.turn = !dealer.turn;
+            while(dealer.getScore() < player.getScore()){
+                this.hit();
+            }
         }
         else {
             //compare scores declare winner
+        	if(player.getScore() > dealer.getScore()){
+        		System.out.println("You Win!");
+        	}
+        	else {
+        		System.out.println("You Lose!");
+        	}
         }
     }
     
