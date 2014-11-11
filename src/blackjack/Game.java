@@ -39,7 +39,6 @@ public class Game {
     }
     
     void deal() {
-        Deck deck = new Deck();
         recorrido = 0;
         
         player.turn = true;
