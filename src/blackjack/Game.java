@@ -41,9 +41,13 @@ public class Game {
         else {
             //compare scores declare winner
         	if(player.getScore() > dealer.getScore()){
+        		System.out.println("Your Score: " + player.getScore());
+        		System.out.println("Dealer Score: " + dealer.getScore());
         		System.out.println("You Win!");
         	}
         	else {
+        		System.out.println("Your Score: " + player.getScore());
+        		System.out.println("Dealer Score: " + dealer.getScore());
         		System.out.println("You Lose!");
         	}
         }

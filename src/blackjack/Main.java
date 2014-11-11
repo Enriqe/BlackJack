@@ -20,7 +20,12 @@ public class Main {
         player.setName(s);
         
         System.out.println(player.getName() + " it's your turn.");
-        System.out.println("Your hand: " + player.getScore());
+        System.out.println("Your Score: " + player.getScore());
+        
+        System.out.println("Your hand: ");
+        for(int i = 0; i < player.hand.cards.length; i++){
+        	System.out.println(player.hand.cards[i].getSuit() + player.hand.cards[i].getRank());
+        }
         
         System.out.println("Hit? (1)");
         System.out.println("Stay? (2)");
@@ -48,6 +53,8 @@ public class Main {
                 System.exit(0);
             }
         } while(player.turn && player.getScore() <= 21);
+        
+        Juego.stay();
         
          in.close();
     }
