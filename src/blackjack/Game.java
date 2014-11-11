@@ -16,18 +16,16 @@ public class Game {
     	recorrido = r;
     }
 
-    public void hit(){
-    	if(player.turn){
-            player.hand.addCard(deck.deckCards[recorrido]);
+    public void hit(Player player1, Player player2){
+    	if(player1.turn){
+            player1.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
-            player.turn = !player.turn;
-            dealer.turn = !dealer.turn;
+            
     	}
     	else{
-            dealer.hand.addCard(deck.deckCards[recorrido]);
+            player2.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
-            player.turn = !player.turn;
-            dealer.turn = !dealer.turn;
+            
     	}
     }
     
