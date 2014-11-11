@@ -48,7 +48,7 @@ public class Game {
         dealer.turn = false;
         
         player.hand.addCard(deck.getCard(recorrido));
-        //System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        //System.out.println("Carta: " + deck.getCard(recorrido).getSuit() + deck.getCard(recorrido).getRank());
         recorrido++;
         
         player.hand.addCard(deck.getCard(recorrido));
