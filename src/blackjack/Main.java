@@ -39,15 +39,7 @@ public class Main {
             }
         }
         else if(i == 2){
-            //stay
-            if(player.turn){
-                player.turn = !player.turn;
-                dealer.turn = !dealer.turn;
-            }
-            else {
-                //compare scores declare winner
-            }
-            
+            Juego.stay();
         }
         else if(i == 3){
             System.out.println("Ended Game");

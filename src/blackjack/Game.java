@@ -31,6 +31,16 @@ public class Game {
     	}
     }
     
+    public void stay() {
+    	if(player.turn){
+            player.turn = !player.turn;
+            dealer.turn = !dealer.turn;
+        }
+        else {
+            //compare scores declare winner
+        }
+    }
+    
     public void deal() {
         recorrido = 0;
         
