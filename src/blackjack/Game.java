@@ -29,7 +29,19 @@ public class Game {
 		return null;
 	}
 
-
+    void hit(boolean p){
+    	if(p){
+            cartaActual = deck.deckCards[recorrido];
+            player.hand.addCard(cartaActual);
+            recorrido++;
+    	}
+    	else{
+            cartaActual = deck.deckCards[recorrido];
+            dealer.hand.addCard(cartaActual);
+            recorrido++;
+    	}
+    }
+    
     void deal() {
         Deck deck = new Deck();
         recorrido = 0;
@@ -95,18 +107,5 @@ public class Game {
     	System.out.println(s);
     }
 
-    
-    
-    void hit(boolean p){
-    	if(p){
-            cartaActual = deck.deckCards[recorrido];
-            player.hand.addCard(cartaActual);
-            recorrido++;
-    	}
-    	else{
-            cartaActual = deck.deckCards[recorrido];
-            dealer.hand.addCard(cartaActual);
-            recorrido++;
-    	}
-    }
+
 }
