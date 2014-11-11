@@ -45,8 +45,4 @@ public class Player {
 		return this.hand.getSum();
 	}
 
-	public void setScore(int score) {
-		this.score = score;
-	}
-
 }
