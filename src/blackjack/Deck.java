@@ -1,21 +1,13 @@
 package blackjack;
 import java.util.*;
 
-public class Deck extends Card{
+public class Deck {
 	
 	Card[] deckCards = new Card[52];
 	
 	public void Deck(){
 		Card[] deckCards = new Card[52];
 		this.createDeck();
-	}
-
-	public Card[] getDeckCards() {
-		return deckCards;
-	}
-
-	public void setDeckCards(Card[] deckCards) {
-		this.deckCards = deckCards;
 	}
 
 	public void createDeck() {
