@@ -47,11 +47,7 @@ public class Main {
             System.exit(0);
         }
         
-        System.out.println(i);
-        System.out.println(s);
-        
          in.close();
-    
     }
     
 }
