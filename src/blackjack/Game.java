@@ -16,17 +16,36 @@ public class Game {
     	recorrido = r;
     }
 
-    public void hit(Player player1, Player player2){
-    	if(player1.turn){
-            player1.hand.addCard(deck.deckCards[recorrido]);
+    public void hit(){
+    	if(player.turn){
+            player.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
             
     	}
     	else{
-            player2.hand.addCard(deck.deckCards[recorrido]);
+            dealer.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
             
     	}
+    }
+    
+    public void stay() {
+    	if(player.turn){
+            player.turn = !player.turn;
+            dealer.turn = !dealer.turn;
+            while(dealer.getScore() < player.getScore()){
+                this.hit();
+            }
+        }
+        else {
+            //compare scores declare winner
+        	if(player.getScore() > dealer.getScore()){
+        		System.out.println("You Win!");
+        	}
+        	else {
+        		System.out.println("You Lose!");
+        	}
+        }
     }
     
     public void deal() {
