@@ -3,25 +3,20 @@ package blackjack;
 import java.util.Scanner;
 
 public class Game {
-    public Deck deck;
     public static Player player = new Player(), dealer = new Player();
     public int recorrido = 0;
+    public static Deck deck = new Deck();
     
     public Game(){
-    	deck = new Deck();
     	recorrido = 0;
     }
     
-    public Game(Deck d, Player p, Player deal, int r){
-    	deck = d;
+    public Game(Player p, Player deal, int r){
     	player = p;
     	dealer = deal;
     	recorrido = r;
     }
-    
-    Deck deck(){
-    	return null;
-    }
+   
     
     Player player(String nombre) {
 		return null;

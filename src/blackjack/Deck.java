@@ -42,6 +42,10 @@ public class Deck {
 			deckCards[index] = deckCards[i];
 			deckCards[i] = temp;
 		}
+		System.out.println("Deck:");
+		for(int i = 0; i < 52; i++) {
+			System.out.println(deckCards[i].getSuit() + deckCards[i].getRank());
+		}
 	}
 	
 	public Card getCard(int index) {
