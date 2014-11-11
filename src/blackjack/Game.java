@@ -6,7 +6,6 @@ public class Game {
     public Deck deck;
     public static Player player = new Player(), dealer = new Player();
     public int recorrido = 0;
-    public Card cartaActual;
     
     public Game(){
     	deck = new Deck();
@@ -40,17 +39,20 @@ public class Game {
         dealer.name = "Dealer";
         dealer.turn = false;
         
-        cartaActual = deck.deckCards[recorrido];
-        player.hand.addCard(cartaActual);
+        player.hand.addCard(deck.getCard[recorrido]);
+        System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
-        cartaActual = deck.deckCards[recorrido];
-        player.hand.addCard(cartaActual);
+        
+        player.hand.addCard(deck.deckCards[recorrido]);
+        System.out.println("Carta player: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
-        cartaActual = deck.deckCards[recorrido];
-        dealer.hand.addCard(cartaActual);
-        recorrido++;        
-        cartaActual = deck.deckCards[recorrido];
-        dealer.hand.addCard(cartaActual);
+        
+        dealer.hand.addCard(deck.deckCards[recorrido]);
+        System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
+        recorrido++;     
+        
+        dealer.hand.addCard(deck.deckCards[recorrido]);
+        System.out.println("Carta dealer: " + deck.deckCards[recorrido].getSuit() + deck.deckCards[recorrido].getRank());
         recorrido++;
     };
     
@@ -66,7 +68,8 @@ public class Game {
     	String s = in.next();
     	player.setName(s);
     	
-    	System.out.println(player.getName() + " your Score is: " + player.getScore());
+    	System.out.println(player.getName() + " it's your turn.");
+    	System.out.println("Your hand: " + player.getScore());
     	
     	System.out.println("Hit? (1)");
     	System.out.println("Stay? (2)");

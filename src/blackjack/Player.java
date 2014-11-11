@@ -42,7 +42,7 @@ public class Player {
 	}
 	
 	public int getScore() {
-		return score;
+		return this.hand.getSum();
 	}
 
 	public void setScore(int score) {

@@ -17,6 +17,10 @@ public class Deck extends Card{
 	public void setDeckCards(Card[] deckCards) {
 		this.deckCards = deckCards;
 	}
+	
+	public Card getCard(int index) {
+		return this.deckCards[index];
+	}
 
 	public void createDeck() {
 		int count = 0;
