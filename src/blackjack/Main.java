@@ -23,9 +23,7 @@ public class Main {
         System.out.println("Your Score: " + player.getScore());
         
         System.out.println("Your hand: ");
-        for(int i = 0; i < player.hand.cards.length; i++){
-        	System.out.println(player.hand.cards[i].getSuit() + player.hand.cards[i].getRank());
-        }
+        player.hand.show();
         
         System.out.println("Hit? (1)");
         System.out.println("Stay? (2)");
