@@ -29,13 +29,11 @@ public class Game {
 
     void hit(boolean p){
     	if(p){
-            cartaActual = deck.deckCards[recorrido];
-            player.hand.addCard(cartaActual);
+            player.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
     	}
     	else{
-            cartaActual = deck.deckCards[recorrido];
-            dealer.hand.addCard(cartaActual);
+            dealer.hand.addCard(deck.deckCards[recorrido]);
             recorrido++;
     	}
     }
