@@ -92,10 +92,23 @@ public class Game {
     	if(i == 1){
     		if(player.turn){
     			//.hit(true);
+    		}else{
+    			while(dealer.getScore() < player.getScore()){
+    				//.hit(true);
+    				if(dealer.getScore() >= player.getScore()){
+    					player.turn = !player.turn;
+    					dealer.turn = !dealer.turn;
+    							
+    				}
+    			}
     		}
     	}
     	else if(i == 2){
     		//stay
+    		if(player.turn){
+    			player.turn = !player.turn;
+    			dealer.turn = !dealer.turn;
+    		}
     		
     	}
     	else if(i == 3){
