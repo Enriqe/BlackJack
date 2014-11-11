@@ -66,7 +66,6 @@ public class Game {
     	Juego.deal();
     	
     	System.out.println("What is your name?");
-    	//String s = System.console().readLine();
     	String s = in.next();
     	player.setName(s);
     	
@@ -81,15 +80,11 @@ public class Game {
     	
     	if(i == 1){
     		if(player.turn){
-    			//.hit(true);
+    			//hit(true);
     		}else{
     			while(dealer.getScore() < player.getScore()){
-    				//.hit(true);
-    				if(dealer.getScore() >= player.getScore()){
-    					player.turn = !player.turn;
-    					dealer.turn = !dealer.turn;
-    							
-    				}
+    				//hit(true);
+    				
     			}
     		}
     	}
@@ -98,6 +93,9 @@ public class Game {
     		if(player.turn){
     			player.turn = !player.turn;
     			dealer.turn = !dealer.turn;
+    		}
+    		else {
+    			//compare scores declare winner
     		}
     		
     	}
