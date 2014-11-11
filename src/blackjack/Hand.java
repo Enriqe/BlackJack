@@ -5,7 +5,7 @@ public class Hand {
 	Card[] cards = new Card [10]; //arreglo dinamico para agregar cartas con cada "hit"
     int cartas=0;
     int suma = 0;
-    int size = 1;
+    int size = 0;
     
     public Hand() {
     	Card carta = new Card();
@@ -31,7 +31,8 @@ public class Hand {
 	
 	public void show() {
 		for(int i = 0; i < this.size; i++){
-        	System.out.println(this.cards[i].getSuit() + " " + this.cards[i].getRank());
+        	if(this.cards[i].getSuit() != "")
+			System.out.println(this.cards[i].getSuit() + " " + this.cards[i].getRank());
         }
 	}
 
