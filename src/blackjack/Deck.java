@@ -3,10 +3,9 @@ import java.util.*;
 
 public class Deck {
 	
-	//Card[] deckCards = new Card[52];
+	public Card[] deckCards = new Card[52];
 	
 	public void Deck(){
-		Card[] deckCards = new Card[52];
 		int count = 0;
 		for(int i = 0; i < 13; i++){
 			deckCards[i].setSuit("Heart");
@@ -45,5 +44,7 @@ public class Deck {
 		}
 	}
 	
-	
+	public Card getCard(int index) {
+		return this.deckCards[index];
+	}
 }
