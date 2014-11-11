@@ -26,6 +26,9 @@ public class Main {
         //for(int i = 0; i < player.hand.cards.length; i++){
         	//System.out.println(player.hand.cards[i].getSuit() + "  "+ player.hand.cards[i].getRank());
         //}
+        System.out.println("Your hand: ");
+        player.hand.show();
+
         
         System.out.println("Hit? (1)");
         System.out.println("Stay? (2)");
