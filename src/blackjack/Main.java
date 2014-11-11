@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("Ended Game");
                 System.exit(0);
             }
-        } while(player.turn);
+        } while(player.turn && player.getScore() <= 21);
         
          in.close();
     }

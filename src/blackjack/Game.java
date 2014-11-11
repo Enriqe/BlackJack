@@ -33,7 +33,7 @@ public class Game {
     	if(player.turn){
             player.turn = !player.turn;
             dealer.turn = !dealer.turn;
-            while(dealer.getScore() < player.getScore()){
+            while(dealer.getScore() < player.getScore() && dealer.getScore() <= 21){
                 this.hit();
             }
             this.stay();
