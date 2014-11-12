@@ -40,7 +40,7 @@ public class Game {
         }
         else {
             //compare scores declare winner
-        	if(player.getScore() > dealer.getScore()){
+        	if(player.getScore() > dealer.getScore() && (player.getScore() <=21)){
         		System.out.println("Your Score: " + player.getScore());
         		System.out.println("Dealer Score: " + dealer.getScore());
         		System.out.println("You Win!");
