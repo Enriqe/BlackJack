@@ -45,7 +45,7 @@ public class Main {
                 player.hand.show();
                 System.out.println("\nYour score: " + player.getScore());
                 if(player.getScore() > 21){
-                	System.out.println("You Lose");
+                	System.out.println("You Lose\n");
                 	System.out.println("New Game? (4)");
                 	System.out.println("Quit? (3)");
                 	i = in.nextInt();
@@ -57,8 +57,8 @@ public class Main {
                     if(i == 1){
             			if(player.turn){
             				Juego.hit();
-            				player.turn = !player.turn;
-            				dealer.turn = !dealer.turn;
+            				/*player.turn = !player.turn;
+            				dealer.turn = !dealer.turn;*/
             			}else{
             				Juego.hit();
             				player.turn = !player.turn;
