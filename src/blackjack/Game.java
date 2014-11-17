@@ -30,6 +30,22 @@ public class Game {
     }
     
     public void stay() {
+    	player.turn = !player.turn;
+        dealer.turn = !dealer.turn;
+    	while(dealer.getScore() < player.getScore() && dealer.getScore() <= 21){
+            this.hit();
+        }
+    	if(player.getScore() > dealer.getScore() && (player.getScore() <=21)){
+    		System.out.println("Your Score: " + player.getScore());
+    		System.out.println("Dealer Score: " + dealer.getScore());
+    		System.out.println("You Win!");
+    	}
+    	else {
+    		System.out.println("Your Score: " + player.getScore());
+    		System.out.println("Dealer Score: " + dealer.getScore());
+    		System.out.println("You Lose!");
+    	}
+    	/*
     	if(player.turn){
             player.turn = !player.turn;
             dealer.turn = !dealer.turn;
@@ -51,6 +67,7 @@ public class Game {
         		System.out.println("You Lose!");
         	}
         }
+        */
     }
     
     public void deal() {
