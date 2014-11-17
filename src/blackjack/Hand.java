@@ -1,6 +1,6 @@
 package blackjack;
 
-public class Hand extends Game{
+public class Hand{
     
 	Card[] cards = new Card [10]; //arreglo dinamico para agregar cartas con cada "hit"
     int cartas=0;
@@ -8,11 +8,6 @@ public class Hand extends Game{
     int size = 0;
     
     public Hand() {
-//    	Card carta = new Card();
-//    	carta.setRank(1);
-//    	carta.setSuit("Diamond");
-//    	cards[0] = carta;
-//    	size = 1;
     	size = 0;
     }
     
