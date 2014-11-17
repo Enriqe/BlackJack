@@ -8,7 +8,7 @@ public class Main {
     public static int recorrido = 0;
     
     private static void menu(){
-    	System.out.println("What would you like to do now?\n");
+    	System.out.println("What would you like to do now?");
     	System.out.println("Hit? (1)");
         System.out.println("Stay? (2)");
         System.out.println("Quit? (3)");
