@@ -36,7 +36,7 @@ public class Game {
             while(dealer.getScore() < player.getScore() && dealer.getScore() <= 21){
                 this.hit();
             }
-            this.stay();
+            //this.stay();
         }
         else {
             //compare scores declare winner
