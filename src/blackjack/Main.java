@@ -81,7 +81,7 @@ public class Main {
                 }
             } while((player.turn || player.getScore() <= 21) && i != 2 && i != 3 && i !=4);
         }while(i != 3);
-        
+        System.out.println("Game Ended");
         
          in.close();
     }
