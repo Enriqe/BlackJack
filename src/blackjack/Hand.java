@@ -10,12 +10,21 @@ public class Hand{
     public Hand() {
     	size = 0;
     }
+    /* 
+     * El metodo addCard agrega una carta a la clase mano
+     * 
+     */
     
 	public void addCard(Card cardDrawn) {
 		cards[cartas] = cardDrawn;
 		cartas++;
 		size++;
 	}
+	
+	/*
+	 * El metodo getSum regresa la suma de la mano que tiene actualmente
+	 * el jugador
+	 */
 	
 	public int getSum() {
 		suma = 0;
@@ -24,6 +33,12 @@ public class Hand{
 		}
 		return suma;
 	}
+	
+	/*
+	 * El metodo show, despliega la mano que tiene
+	 * actualmente el jugador
+	 * 
+	 */
 	
 	public void show() {
 		for(int i = 0; i < this.size; i++){

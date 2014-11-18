@@ -1,6 +1,7 @@
 package blackjack;
 
 
+
 public class Game {
 	public static Player player = new Player(), dealer = new Player();
 	public int recorrido = 0;
@@ -16,6 +17,11 @@ public class Game {
 		recorrido = r;
 	}
 
+	/*
+	 * El metodo de hit es cuando un jugador sea Dealer/Jugador desea otra carta
+	 * se le agrega una tercera o hasta cuarta carta a la mano por el metodo de 
+	 * addCard
+	 */
 	public void hit(){
 		if(player.turn){
 			player.hand.addCard(deck.deckCards[recorrido]);
@@ -28,6 +34,13 @@ public class Game {
 
 		}
 	}
+	
+	/*
+	  El metodo stay es cuando el jugador 
+	  desea retirarse de seguir recibiendo cartas, al hacer esto
+	  es el turno del dealer el cual ejecuta las mismas movidas que el jugador 
+	  se realiza el calculo de quien ganara la partida.
+	 */
 
 	public void stay() {
 		player.turn = !player.turn;
@@ -83,6 +96,12 @@ public class Game {
         }
 		 */
 	}
+	
+	/*
+	 * El metodo de Deal se usa cuando se inicia el juego, el jugador empieza por escoger que 
+	 * desea hacer y es su turno, el metodo de addCard le agrega una mano a cada jugador 
+	 * dandoles dos cartas e indicando su valor
+	 */
 
 	public void deal() {
 		recorrido = 0;

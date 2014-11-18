@@ -5,6 +5,11 @@ public class Deck {
 	
 	public Card[] deckCards = new Card[52];
 	
+	/*
+	 * El metodo de Deck, crea un mazo de cartas las cuales empiezan revueltas 
+	 * se crean 13 cartas de cada uno de las manos y se insertan en un arreglo de cartas
+	 */
+	
 	public Deck(){
 		int count = 0;
 		
@@ -53,6 +58,10 @@ public class Deck {
 			this.deckCards[i] = temp;
 		}
 	}
+	
+	/*
+	 * El metodo get card regresa una carta del mazo de cartas
+	 */
 	
 	public Card getCard(int index) {
 		return this.deckCards[index];

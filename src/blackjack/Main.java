@@ -7,6 +7,11 @@ public class Main {
     public static Player player, dealer;
     public static int recorrido = 0;
     
+    /*
+     * El metodo menu es para desplegar las opciones disponibles para el 
+     * usuario que debe de hacer para llevar acabo su juego
+     * 
+     */
     private static void menu(){
     	System.out.println("What would you like to do now?");
     	System.out.println("Hit? (1)");
